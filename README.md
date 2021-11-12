@@ -6,4 +6,6 @@ Test video [here](https://drive.google.com/file/d/14vzioKIPfgoeUqZB8P4_KjsJc4zG8
 ```
 python counting_people.py --video D:/pycharmprojects/Counting-People/test.mp4
 ```
+Output [video](https://drive.google.com/file/d/1ljOc76gY_0teYBgaWYHYqAFiu_eNgP3W/view?usp=sharing)
+
 [Reference](https://github.com/Matskevichivan)
