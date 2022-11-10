@@ -4,8 +4,8 @@ import sys
 import numpy as np
 import os.path
 import math
-from counting.centroidtracker import CentroidTracker
-from counting.trackableobject import TrackableObject
+from utils.centroidtracker import CentroidTracker
+from utils.trackableobject import TrackableObject
 
 # Initialize the parameters
 confThreshold = 0.6  #Confidence threshold
