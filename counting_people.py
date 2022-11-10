@@ -171,9 +171,14 @@ def counting(objects):
 
     # loop over the info tuples and draw them on our frame
     for (i, (k, v)) in enumerate(info):
-        text = "{}: {}".format(k, v)
-        cv.putText(frame, text, (10, frameHeight - ((i * 20) + 20)),
-            cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+
+        text = "{}".format(v)
+        if k == 'Up':
+            cv.putText(frame, f'Up : {text}', (10, 55),
+                cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+        if k == 'Down':
+            cv.putText(frame, f'Down : {text}', (10, 75),
+                       cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
 
 # Process inputs
 winName = 'People Counting and Tracking System'
