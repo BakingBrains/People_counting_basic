@@ -94,7 +94,6 @@ def postprocess(frame, outs):
     # lower confidences.
     indices = cv.dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold)
     for i in indices:
-        i = i
         box = boxes[i]
         left = box[0]
         top = box[1]
