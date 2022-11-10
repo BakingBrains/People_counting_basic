@@ -15,18 +15,18 @@ inpHeight = 416      #Height of network's input image
 
 parser = argparse.ArgumentParser(description='Object Detection using YOLO in OPENCV')
 
-parser.add_argument('--video', help='Path to video file.')
+parser.add_argument('--video', default='test.mp4', help='Path to video file.')
 args = parser.parse_args()
         
 # Load names of classes
-classesFile = "coco.names";
+classesFile = "coco.names"
 classes = None
 with open(classesFile, 'rt') as f:
     classes = f.read().rstrip('\n').split('\n')
 
 # Give the configuration and weight files for the model and load the network using them.
-modelConfiguration = "yolov3.cfg";
-modelWeights = "yolov3.weights";
+modelConfiguration = "yolov3.cfg"
+modelWeights = "yolov3.weights"
 
 # load our serialized model from disk
 print("[INFO] loading model...")
@@ -59,7 +59,7 @@ def getOutputsNames(net):
     # Get the names of all the layers in the network
     layersNames = net.getLayerNames()
     # Get the names of the output layers, i.e. the layers with unconnected outputs
-    return [layersNames[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+    return [layersNames[i - 1] for i in net.getUnconnectedOutLayers()]
 
 
 # Remove the bounding boxes with low confidence using non-maxima suppression
@@ -94,7 +94,7 @@ def postprocess(frame, outs):
     # lower confidences.
     indices = cv.dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold)
     for i in indices:
-        i = i[0]
+        i = i
         box = boxes[i]
         left = box[0]
         top = box[1]
