@@ -1,5 +1,5 @@
 # People_counting_basic
-Download YOLO v3 weights [here](https://drive.google.com/drive/folders/1AhOM31dy8jfLqQ1CcVcXJgWmorG_TzjU?usp=sharing) <br>
+Download YOLO v3 weights [here](https://pjreddie.com/media/files/yolov3.weights) <br>
 
 Test video [here](https://drive.google.com/file/d/17uVp-15sD-h5Y_WkbX1fl-Z8IPcAqA45/view?usp=sharing)
 
